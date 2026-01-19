@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Hero from './components/Hero';
 import NotionBlock from './components/NotionBlock';
-import { MapPin, Music, Coffee, CableCar, CupSoda, House, Play, Pause } from 'lucide-react';
+import { MapPin, Music, CableCar, CupSoda, House, Play, Pause } from 'lucide-react';
 import SkiingBear from './components/SkiingBear';
 import yhxAudio from './assets/yhx.mp3';
 
