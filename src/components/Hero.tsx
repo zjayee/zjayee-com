@@ -6,6 +6,9 @@ const Hero: React.FC = () => {
             <h1 className="text-6xl font-bold tracking-tight mb-6 text-[var(--accent-blue-text)] font-serif italic">
                 Jayee Zheng
             </h1>
+            <p className="text-lg text-[var(--text-secondary)] font-normal max-w-xl leading-relaxed font-mono">
+                SWE @ Google
+            </p>
             <p className="text-xl text-[var(--text-secondary)] font-normal max-w-xl leading-relaxed font-mono">
                 Building cool AI experiences ~
             </p>

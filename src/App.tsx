@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Hero from './components/Hero';
 import NotionBlock from './components/NotionBlock';
-import { MapPin, Music, Coffee, CableCar, CupSoda, House } from 'lucide-react';
+import { MapPin, Music, Coffee, CableCar, CupSoda, House, Play, Pause } from 'lucide-react';
 import SkiingBear from './components/SkiingBear';
+import yhxAudio from './assets/yhx.mp3';
 
 function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio(yhxAudio);
+    audioRef.current.addEventListener('ended', () => setIsPlaying(false));
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[var(--bg-color)] px-6 py-12 md:py-20">
       <main className="max-w-4xl mx-auto"> {/* Increased max-w to accommodate side-by-side */}
@@ -35,7 +61,16 @@ function App() {
                 <span className="font-mono">Iced Strawberry Matcha Enjoyer</span>
               </NotionBlock>
               <NotionBlock type="list-item" icon={<Music size={18} />}>
-                <span className="font-mono">For You - Yan Haoxiang</span>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono">For You - Yan Haoxiang</span>
+                  <button
+                    onClick={togglePlay}
+                    className="p-1 hover:bg-gray-100 rounded-full transition-colors text-gray-600 hover:text-gray-900"
+                    aria-label={isPlaying ? 'Pause' : 'Play'}
+                  >
+                    {isPlaying ? <Pause size={12} /> : <Play size={12} />}
+                  </button>
+                </div>
               </NotionBlock>
             </div>
           </div>
