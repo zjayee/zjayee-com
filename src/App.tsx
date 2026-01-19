@@ -38,7 +38,7 @@ function App() {
 
         <div className="max-w-2xl">
           <NotionBlock type="text">
-            I build AI agents and tools designed to delete the "boring work" from people's lives. My focus is applying LLMs to create products that people are actually excited to use. Tools that feel less like software and more like magic in real life.
+            I build AI agents and tools designed to delete the "boring work" from people's lives. My focus is applying AI to create products that people are actually excited to use. Tools that feel less like software and more like magic in real life.
           </NotionBlock>
         </div>
 
