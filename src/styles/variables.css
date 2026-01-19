@@ -1,0 +1,19 @@
+:root {
+  /* Colors */
+  --bg-color: #fafafa;
+  --text-main: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+
+  --accent-blue: #E0F7FA;
+  --accent-blue-text: #70b8db;
+  /* Slightly darker for text readability */
+
+  /* Spacing */
+  --spacing-section: 4rem;
+
+  /* Typography */
+  --font-main: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Ephesis', cursive;
+  --font-mono: 'Courier Prime', monospace;
+}
