@@ -45,6 +45,10 @@ function App() {
 
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <div className="flex-1">
+            <NotionBlock type="text">
+              Check out some of my <a href="https://zjayee.com/work" className="underline decoration-dotted underline-offset-4 hover:text-[var(--text-main)] transition-colors">work</a>
+            </NotionBlock>
+
             <NotionBlock type="h2">A LITTLE MORE ABOUT ME</NotionBlock>
 
             <div className="space-y-1">
